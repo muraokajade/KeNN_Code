@@ -1,0 +1,139 @@
+.about-text {
+  font-size: 6rem;
+  font-weight: 500;
+  color: rgb(166, 172, 172);
+  animation: slideIn 1s ease-in;
+}
+
+.about_background {
+  padding: 100px 100px;
+}
+
+.about_content {
+  animation: Slideup 1s ease-in;
+}
+
+.about_image {
+  overflow: hidden;
+}
+@keyframes SlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes Slideup {
+  from {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.slide-in {
+  animation: slideIn 1s ease-in;
+}
+.scrollContainer {
+  display: flex;
+  animation: scroll 20s linear infinite; /* Adjust the duration and timing function as needed */
+}
+
+@keyframes scroll {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-80%);
+  }
+}
+
+.about_image {
+  overflow: hidden;
+}
+
+.scrollContainer {
+  display: flex;
+
+  animation: scroll 20s linear infinite;
+}
+
+@media (max-width: 767px) {
+  .scrollContainer {
+    display: block;
+    width: 100%;
+    white-space: nowrap;
+    overflow-x: auto;
+    animation: none;
+  }
+
+  .scrollContainer img {
+    width: 100%;
+  }
+  .about-text {
+    text-align: center;
+  }
+}
+
+.profile_background {
+  padding: 100px 100px;
+}
+
+.profile-text {
+  position: relative;
+  font-size: 3rem;
+  color: rgb(166, 172, 172);
+}
+
+.profile-text::after {
+  content: "";
+  position: absolute;
+  width: 142px;
+  height: 1px;
+  top: 70px;
+  left: 4px;
+  background-color: red;
+}
+
+.profile-text.in-view {
+  animation: rotation-in 1s ease-in;
+}
+
+.profile-text::after.inview {
+  animation: slash 2s ease-in;
+}
+
+@keyframes slash {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes rotation-in {
+  0% {
+    opacity: 0;
+    transform: rotate(-45deg) translate(-50%, -100%);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(0) translate(0, 0);
+  }
+}
+.profile_image.slide-up {
+  animation: Slideup 1s ease-in;
+}
+
+.profile_content.slide-up {
+  animation: Slideup 1s ease-in;
+}

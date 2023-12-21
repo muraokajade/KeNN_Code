@@ -1,0 +1,48 @@
+.potofolio_background {
+  padding: 100px 100px;
+}
+
+.potofolio_text {
+  font-size: 6rem;
+  font-weight: 500;
+  color: rgb(166, 172, 172);
+  animation: slideIn 1s ease-in;
+}
+
+@keyframes SlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.potofolio_cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.potofolio_card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px;
+  width: 300px;
+  padding: 30px;
+  border-radius: 5px;
+  background-color: rgb(226, 232, 232);
+}
+
+.portfolio_card_title {
+  color: black;
+}
+
+@media (max-width: 768px) {
+  .potofolio_text{
+    font-size: 4rem;
+  }
+}
